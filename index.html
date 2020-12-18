@@ -38,10 +38,14 @@
 
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
   <div class="page-contain">
-    
-
 
 <script language="javascript">
+
+    fetch('https://raw.githubusercontent.com/fookh/728/master/test.txt')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector("#testAvis").innerHTML = data;
+      })
 
   function MM_preloadImages() { //v3.0
   var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
@@ -162,6 +166,7 @@
           <h1>Analyse de patch</h1>
           <h1>FroggedTV</h1>
 
+          <div id="testAvis">coucou</div>
           <div class="shards"></div>
           <div id="General" class="padding-bottom-lg">
             <div class="general"></div>
